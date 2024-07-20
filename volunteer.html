@@ -1,0 +1,629 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Persatuan Haiwan Malaysia</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .swal2-confirm {
+            background-color: black !important; /* Change this to the desired color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .swal2-confirm:hover {
+            background-color: #ff2121 !important; /* Change this to the desired hover color */
+        }
+    </style>
+    
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!--? Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/logo/logo.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav> 
+                                        <ul id="navigation">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="news.html">News</a></li>
+                                            <li><a href="contribute.html">Contribute</a></li>
+                                            <li><a href="ourpartners.html">Our Partners</a></li>
+                                            <li><a href="#">Registration</a>
+                                                <ul class="submenu">
+                                                    <li><a href="volunteer.html">Volunteer</a></li>
+                                                    <li><a href="internship.html">Internship</a></li>
+                                                    <li><a href="cert.html">Ownership/Death Certificate</a></li>
+                                                    <li><a href="certification.html">Certification</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Info</a>
+                                                <ul class="submenu">
+                                                    <li><a href="about.html">About</a></li>
+                                                    <li><a href="faq.html">FAQ</a></li>
+                                                    <li><a href="virtualtour.html">Virtual Tour</a></li>
+                                                    <li><a href="team.html">Meet our Team</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                                    <a href="contact.html" class="header-btn">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>   
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main> 
+        <!-- Hero Area Start -->
+        <div class="slider-area2 slider-height2 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center pt-50">
+                            <h2>Volunteer</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Area End -->
+       <!-- Form Start -->
+<div class="container-fluid callback my-5 pt-5">
+    <div class="container pt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="bg-white border rounded p-4 p-sm-5 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                        <h1 class="display-5 mb-5">Registration</h1>
+                    </div>
+                    <form id="volunteerForm">
+                        <!-- Section 1: Personal Information -->
+                        <div class="form-section">
+                            <h4>Personal Information</h4>
+                            <div class="row g-3">
+                                <!-- Full Name -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <label for="name">Full Name (As per IC)</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Full Name (As per IC)" required>
+                                    </div>
+                                </div>
+                                <!-- IC Number -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <label for="icNumber">IC Number</label>
+                                        <input type="text" class="form-control" id="icNumber" placeholder="IC Number" required>
+                                    </div>
+                                </div>
+                                <!-- Age -->
+                                
+                                <div class="col-sm-6">
+                                    <div class="form-floating"> <br>
+                                        <label for="age">Age</label>
+                                        <input type="number" class="form-control" id="age" placeholder="Age" required>
+                                    </div>
+                                </div>
+                                <!-- Email -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating"> <br>
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <!-- Gender -->
+                                <div class="col-12"><br>
+                                    <label>Gender</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+                                        <label class="form-check-label" for="male">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
+                                        <label class="form-check-label" for="female">Female</label>
+                                    </div>
+                                </div>
+                                <!-- Race -->
+                                <div class="col-12"><br>
+                                    <label>Race</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="race" id="malay" value="Malay" required>
+                                        <label class="form-check-label" for="islam">Malay</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="race" id="chinese" value="Chinese" required>
+                                        <label class="form-check-label" for="christian">Chinese</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="race" id="indian" value="Indian" required>
+                                        <label class="form-check-label" for="buddha">Indian</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="race" id="other" value="Other" required>
+                                        <label class="form-check-label" for="other">Other</label>
+                                    </div>                                </div>
+                                <!-- Religion -->
+                                <div class="col-12"><br>
+                                    <label>Religion</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="religion" id="islam" value="Islam" required>
+                                        <label class="form-check-label" for="islam">Islam</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="religion" id="christian" value="Christian" required>
+                                        <label class="form-check-label" for="christian">Christian</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="religion" id="buddha" value="Buddha" required>
+                                        <label class="form-check-label" for="buddha">Buddha</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="religion" id="hindu" value="Hindu" required>
+                                        <label class="form-check-label" for="hindu">Hindu</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="religion" id="other" value="Other" required>
+                                        <label class="form-check-label" for="other">Other</label>
+                                    </div>
+                                </div>
+                                <!-- Nationality -->
+                                <div class="col-12"><br>
+                                    <label>Nationality</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="nationality" id="malaysian" value="Malaysian" required>
+                                        <label class="form-check-label" for="malaysian">Malaysian</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="nationality" id="nonMalaysian" value="Non-Malaysian" required>
+                                        <label class="form-check-label" for="nonMalaysian">Non-Malaysian</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end mt-4">
+                                <button type="button" class="btn next-btn">Next</button>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Volunteer Information -->
+                        <div class="form-section">
+                            <h4>Volunteer Information</h4><br>
+                            <div class="row g-3">
+                                <!-- Apply Date -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <label for="applyDate">Apply Date</label>
+                                        <input type="date" class="form-control" id="applyDate" placeholder="Apply Date" required>
+                                    </div>
+                                </div>
+                                <!-- Volunteering Date -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <label for="volunteerDate">Volunteering Date</label>
+                                        <input type="date" class="form-control" id="volunteerDate" placeholder="Volunteering Date" required>
+                                    </div>
+                                </div>
+                                <!-- Category -->
+                                <div class="col-12"><br>
+                                    <label>Category</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="category" id="school" value="School" required>
+                                        <label class="form-check-label" for="school">School</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="category" id="ipt" value="IPT" required>
+                                        <label class="form-check-label" for="ipt">IPT</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="category" id="govAgency" value="Government Agency" required>
+                                        <label class="form-check-label" for="govAgency">Government Agency</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="category" id="private" value="Private" required>
+                                        <label class="form-check-label" for="private">Private</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="category" id="corporate" value="Corporate" required>
+                                        <label class="form-check-label" for="corporate">Corporate</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="category" id="club" value="Club" required>
+                                        <label class="form-check-label" for="club">Club</label>
+                                    </div>
+                                </div>
+                                <!-- Institute Name -->
+                                <div class="col-12"><br>
+                                    <div class="form-floating">
+                                        <label for="instituteName">Please write institute/school/agency name (If private, please write private)</label>
+                                        <input type="text" class="form-control" id="instituteName" placeholder="Please write institute/school/agency name" required>
+                                    </div>
+                                </div>
+                                <!-- Purpose -->
+                                <div class="col-12"><br>
+                                    <div class="form-floating">
+                                        <label for="purpose">Volunteering's purpose</label>
+                                        <textarea class="form-control" placeholder="Volunteering's purpose" id="purpose" style="height: 100px" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <button type="button" class="btn btn-secondary prev-btn">Previous</button>
+                                <button type="button" class="btn next-btn">Next</button>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Beneficiary Information -->
+                        <div class="form-section">
+                            <h4>Beneficiary Information</h4><br>
+                            <div class="row g-3">
+                                <!-- Beneficiary Name -->
+                                <div class="col-12"><br>
+                                    <div class="form-floating">
+                                        <label for="beneficiaryName">Beneficiary's name</label>
+                                        <input type="text" class="form-control" id="beneficiaryName" placeholder="Beneficiary's name" required>
+                                    </div>
+                                </div>
+                                <!-- Beneficiary Address -->
+                                <div class="col-12"><br>
+                                    <div class="form-floating">
+                                        <label for="beneficiaryAddress">Beneficiary's address</label>
+                                        <input type="text" class="form-control" id="beneficiaryAddress" placeholder="Beneficiary's address" required>
+                                    </div>
+                                </div>
+                                <!-- Beneficiary Phone Number -->
+                                <div class="col-12"><br>
+                                    <div class="form-floating">
+                                        <label for="beneficiaryPhone">Beneficiary's phone number</label>
+                                        <input type="text" class="form-control" id="beneficiaryPhone" placeholder="Beneficiary's phone number" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <button type="button" class="btn btn-secondary prev-btn">Previous</button>
+                                <button type="button" class="btn next-btn">Next</button>
+                            </div>
+                        </div>
+
+                        <!-- Section 4: Volunteer Fields -->
+                        <div class="form-section">
+                            <h4>Volunteer Fields</h4><br>
+                            <div class="row g-3">
+                                <!-- Fields -->
+                                <div class="col-12">
+                                    <label>Volunteer Field</label><br>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="education" value="Education">
+                                        <label class="form-check-label" for="education">Education</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="adoption" value="Adoption Event">
+                                        <label class="form-check-label" for="adoption">Adoption Event</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="fundraising" value="Fundraising">
+                                        <label class="form-check-label" for="fundraising">Fundraising</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="shelter" value="Shelter Cleaning">
+                                        <label class="form-check-label" for="shelter">Shelter Cleaning</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="grooming" value="Grooming">
+                                        <label class="form-check-label" for="grooming">Grooming</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="speaker" value="Talk Speaker">
+                                        <label class="form-check-label" for="speaker">Talk Speaker</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="community" value="Community service">
+                                        <label class="form-check-label" for="community">Community service</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <button type="button" class="btn btn-secondary prev-btn">Previous</button>
+                                <button type="button" class="btn next-btn">Next</button>
+                            </div>
+                        </div>
+
+                        <!-- Section 5: Consent -->
+                        <div class="form-section">
+                            <form id="consentForm">
+                                <h4>Consent</h4><br>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="consentCheckbox" value="consent" required>
+                                    <label class="form-check-label" for="consentCheckbox">
+                                        I declare that the information I have provided is true and that I am responsible for the safety and any risks that may occur during my volunteer service with the Malaysian Animal Society. I understand that the Certificate of Appreciation/Participation will only be given after the volunteer work period has been properly completed and based on correct, accurate and complete information.
+                                    </label>
+                                </div>
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="button" class="btn btn-secondary prev-btn">Previous</button>
+                                    <button class="btn submit-btn2" type="submit">Submit Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Form End -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('volunteerForm');
+        const formSections = document.querySelectorAll('.form-section');
+        const nextBtns = document.querySelectorAll('.next-btn');
+        const prevBtns = document.querySelectorAll('.prev-btn');
+        const submitBtn = document.querySelector('button[type="submit"]');
+        let currentSection = 0;
+    
+        formSections.forEach((section, index) => {
+            if (index !== currentSection) {
+                section.style.display = 'none';
+            }
+        });
+    
+        nextBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                if (validateSection(currentSection)) {
+                    formSections[currentSection].style.display = 'none';
+                    currentSection++;
+                    formSections[currentSection].style.display = 'block';
+                }
+            });
+        });
+    
+        prevBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                formSections[currentSection].style.display = 'none';
+                currentSection--;
+                formSections[currentSection].style.display = 'block';
+            });
+        });
+    
+        form.addEventListener('submit', function (e) {
+            if (!validateSection(currentSection)) {
+                e.preventDefault();
+            }
+        });
+    
+        function validateSection(sectionIndex) {
+            const inputs = formSections[sectionIndex].querySelectorAll('input, textarea');
+            let isValid = true;
+    
+            inputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    input.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    input.classList.remove('is-invalid');
+                }
+            });
+    
+            return isValid;
+        }
+    
+        // Custom validation for specific fields
+        const nameInput = document.getElementById('name');
+        const icNumberInput = document.getElementById('icNumber');
+        const phoneInput = document.getElementById('beneficiaryPhone');
+    
+        nameInput.addEventListener('input', () => {
+            if (/^[a-zA-Z\s]*$/.test(nameInput.value)) {
+                nameInput.setCustomValidity('');
+            } else {
+                nameInput.setCustomValidity('Please enter alphabetic characters only.');
+            }
+        });
+    
+        icNumberInput.addEventListener('input', () => {
+            if (/^\d+$/.test(icNumberInput.value)) {
+                icNumberInput.setCustomValidity('');
+            } else {
+                icNumberInput.setCustomValidity('Please enter numerical values only.');
+            }
+        });
+    
+        phoneInput.addEventListener('input', () => {
+            if (/^\d+$/.test(phoneInput.value)) {
+                phoneInput.setCustomValidity('');
+            } else {
+                phoneInput.setCustomValidity('Please enter numerical values only.');
+            }
+        });
+    });
+
+    document.getElementById('consentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        Swal.fire({
+            title: "Successfully Registered!",
+            text: "Thank you for registering",
+            icon: "success",
+            customClass: {
+                confirmButton: 'swal2-confirm'
+            }
+        });
+    });
+    </script>
+    
+    </main>
+    <footer>
+        <!-- Footer Start-->
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                       <div class="single-footer-caption mb-50">
+                         <div class="single-footer-caption mb-30">
+                              <!-- logo -->
+                             <div class="footer-logo mb-25">
+                                 <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                             </div>
+                             <div class="footer-tittle">
+                                 <div class="footer-pera">
+                                     <p>Galeri Animal Malaysia<br>Persatuan Haiwan Malaysia</p>
+                                </div>
+                             </div>
+                             <!-- social -->
+                             <div class="footer-social">
+                                 <a href="https://www.instagram.com/galerianimalmalaysia/?hl=en"><i class="fab fa-instagram"></i></a>
+                                 <a href="https://www.facebook.com/animalmalaysia/"><i class="fab fa-facebook-f"></i></a>
+                                 <a href="https://shopee.com.my/galerianimalmalaysia"><i class="fa fa-shopping-cart"></i></a>
+                             </div>
+                         </div>
+                       </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Company</h4>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="faq.html">Frequently Asked Questions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Services</h4>
+                                <ul>
+                                    <li><a href="volunteer.html">Volunteer</a></li>
+                                    <li><a href="internship.html">Internship</a></li>
+                                    <li><a href="cert.html">Ownership/Death Certificate</a></li>
+                                    <li><a href="certification.html">Certification</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Get in Touch</h4>
+                                <ul>
+                                 <li><a href="#">010-530 4749</a></li>
+                                 <li><a href="#">malaysiaanimalassociation@gmail.com</a></li>
+                                 <li><a href="#">5, Jalan Balam, Taman Million, 51100 Kuala Lumpur,
+                                    Wilayah Persekutuan Kuala Lumpur</a></li>
+                             </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                     <div class="row d-flex align-items-center">
+                         <div class="col-xl-12 ">
+                             <div class="footer-copy-right text-center">
+                                 <p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved Persatuan Haiwan Malaysia
+                             </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+    
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Nice-select, sticky -->
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+        
+    </body>
+</html>

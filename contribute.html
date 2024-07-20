@@ -1,0 +1,430 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Donate - Cat Shelter</title>
+    <meta name="description" content="Donation page for Cat Shelter">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .form-area {
+            background: #f9f9f9;
+            padding: 50px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .form-area.active {
+            display: block;
+        }
+        .form-area h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-control {
+            border-radius: 5px;
+            padding: 10px 10px 10px 40px; /* Add padding to make space for RM prefix */
+            border: 1px solid #ddd;
+        }
+        .form-control::placeholder {
+            color: #999;
+        }
+        .prefix {
+            position: absolute;
+            top: 70%;
+            left: 10px;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        #amount {
+            padding-left: 40px; /* Adjust this value to fit the prefix width */
+        }
+
+        .thank-you-message {
+            display: none;
+            text-align: center;
+        }
+        .thank-you-message h2 {
+            color: #28a745;
+        }
+
+        .swal2-confirm {
+        background-color: black !important; /* Change this to the desired color */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        transition: background-color 0.3s ease;
+        border-color: black;
+        }
+
+        .swal2-confirm:hover {
+            background-color: #ff2121 !important; /* Change this to the desired hover color */
+        }
+
+        .form-area h3 {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group input::placeholder {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/logo/logo.svg" alt="Logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav> 
+                                        <ul id="navigation">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="news.html">News</a></li>
+                                            <li><a href="contribute.html">Contribute</a></li>
+                                            <li><a href="ourpartners.html">Our Partners</a></li>
+                                            <li><a href="#">Registration</a>
+                                                <ul class="submenu">
+                                                    <li><a href="volunteer.html">Volunteer</a></li>
+                                                    <li><a href="internship.html">Internship</a></li>
+                                                    <li><a href="cert.html">Ownership/Death Certificate</a></li>
+                                                    <li><a href="certification.html">Certification</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Info</a>
+                                                <ul class="submenu">
+                                                    <li><a href="about.html">About</a></li>
+                                                    <li><a href="faq.html">FAQ</a></li>
+                                                    <li><a href="virtualtour.html">Virtual Tour</a></li>
+                                                    <li><a href="team.html">Meet our Team</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                                    <a href="contact.html" class="header-btn">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>   
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+
+    <main> 
+        <!-- Hero Area Start -->
+        <div class="slider-area2 slider-height2 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center pt-50">
+                            <h2>Contribute</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Area End -->
+
+         <!-- Donation Form Section Start -->
+         <div class="container mt-5">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="form-area active" id="donation-form">
+                        <center><h3>Donate to Support Our Shelter</h3></center>
+                        <form id="donationDetailsForm">
+                            <div class="form-group">
+                                <label for="name">Full Name:</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number:</label>
+                                <input type="text" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">Donation Amount:</label>
+                                <div class="prefix">RM</div>
+                                <input type="number" class="form-control" id="amount" name="amount" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message (optional):</label>
+                                <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                            </div>
+                            <center>
+                            <div class="submit-info">
+                                <button class="btn submit-btn2" type="submit">Proceed to Payment</button>
+                            </div></center>                        
+                        </form>
+                    </div>
+                    
+                    <div class="form-area" id="payment-form">
+                        <center><h3>Credit Card Payment</h3></center>
+                        <form id="paymentDetailsForm">
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number:</label>
+                                <input type="text" class="form-control" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date:</label>
+                                <input type="text" class="form-control" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV:</label>
+                                <input type="text" class="form-control" id="cvv" name="cvv" placeholder="123" required>
+                            </div>
+                            <center>
+                                <div class="submit-info">
+                                    <button class="btn submit-btn2" type="submit">Pay Now</button>
+                                </div>
+                            </center>                          
+                        </form>
+                    </div>
+                    
+                    <div class="thank-you-message" id="thankYouMessage">
+                        <h2>Successfully Paid</h2>
+                        <p>Thank you for contributing to our animal welfare!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Donation Form Section End -->
+    </main>
+    
+    <footer>
+        <!-- Footer Start -->
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                       <div class="single-footer-caption mb-50">
+                         <div class="single-footer-caption mb-30">
+                              <!-- logo -->
+                             <div class="footer-logo mb-25">
+                                 <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt="Logo"></a>
+                             </div>
+                             <div class="footer-social">
+                                 <a href="https://www.facebook.com/AnimalMalaysia/"><i class="fab fa-facebook-square"></i></a>
+                                 <a href="https://twitter.com/animalmalaysia"><i class="fab fa-twitter"></i></a>
+                                 <a href="https://www.instagram.com/animalmalaysia"><i class="fab fa-instagram"></i></a>
+                                 <a href="https://shopee.com.my/animalmalaysia"><i class="fas fa-shopping-cart"></i></a>
+                                 <a href="https://wa.me/60105304749"><i class="fab fa-whatsapp"></i></a>
+                             </div>
+                         </div>
+                       </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Services</h4>
+                                <ul>
+                                    <li><a href="volunteer.html">Volunteer</a></li>
+                                    <li><a href="internship.html">Internship</a></li>
+                                    <li><a href="cert.html">Ownership/Death Certificate</a></li>
+                                    <li><a href="certification.html">Certification</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Get in Touch</h4>
+                                <ul>
+                                 <li><a href="#">010-530 4749</a></li>
+                                 <li><a href="#">malaysiaanimalassociation@gmail.com</a></li>
+                                 <li><a href="#">5, Jalan Balam, Taman Million, 51100 Kuala Lumpur,
+                                    Wilayah Persekutuan Kuala Lumpur</a></li>
+                             </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                     <div class="row d-flex align-items-center">
+                         <div class="col-xl-12 ">
+                             <div class="footer-copy-right text-center">
+                                 <p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved Persatuan Haiwan Malaysia
+                             </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+    </footer>
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/animated.headline.js"></script>
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+    <!-- contact js -->
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/jquery.form.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/mail-script.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <!-- Jquery Plugins, main Jquery -->    
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Custom JS for form handling -->
+    <script>
+        document.getElementById('donationDetailsForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('donation-form').classList.remove('active');
+        document.getElementById('payment-form').classList.add('active');
+    });
+
+    document.getElementById('expiryDate').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 2) {
+                value = value.slice(0, 2) + '/' + value.slice(2, 4);
+            }
+            e.target.value = value;
+        });
+
+    document.getElementById('paymentDetailsForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        Swal.fire({
+            title: "Successfully Paid!",
+            text: "Thank you for contributing to our animal welfare",
+            icon: "success",
+            customClass: {
+                confirmButton: 'swal2-confirm'
+            }
+        });
+
+        document.getElementById('cardNumber').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 16) value = value.slice(0, 16);
+        e.target.value = value.replace(/(.{4})/g, '$1 ').trim();
+    });
+
+    document.getElementById('expiryDate').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 4) value = value.slice(0, 4);
+        e.target.value = value.replace(/(\d{2})(\d{1,2})/, '$1/$2').slice(0, 5);
+    });
+
+    document.getElementById('cvv').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 3) value = value.slice(0, 3);
+        e.target.value = value;
+    });
+
+    document.getElementById('paymentDetailsForm').addEventListener('submit', function (e) {
+        const cardNumber = document.getElementById('cardNumber').value.replace(/\s/g, '');
+        const expiryDate = document.getElementById('expiryDate').value;
+        const cvv = document.getElementById('cvv').value;
+
+        if (cardNumber.length !== 16) {
+            alert('Card number must be 16 digits');
+            e.preventDefault();
+        } else if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiryDate)) {
+            alert('Expiry date must be in MM/YY format and month between 01 and 12');
+            e.preventDefault();
+        } else if (cvv.length !== 3) {
+            alert('CVV must be 3 digits');
+            e.preventDefault();
+        }
+    });
+    });
+
+document.getElementById('paymentDetailsForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    // Display the SweetAlert
+    Swal.fire({
+        title: 'Success!',
+        text: 'Thank you for your payment!',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Reset the form
+            document.getElementById('donationDetailsForm').reset();
+            
+            // Scroll back to the top of the form
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Optional: for smooth scrolling
+            });
+        }
+    });
+});
+    </script>    
+</body>
+</html>
